@@ -67,14 +67,11 @@ namespace MenyÖvning2
             while (string.IsNullOrEmpty(input) || (input.Split().Length<3))
 
             {
-                Console.WriteLine("enter a mening that contains at least 3 words try again !", Color.Orange);
+                Console.WriteLine("enter a mening that contains at least 3 words try again !", Color.GreenYellow);
                 input = Console.ReadLine();
 
             }
             string[] menning = input.Split();
-
-            if (menning.Length >= 3)
-                {
 
                     foreach (var word in menning)
                     {
@@ -82,20 +79,20 @@ namespace MenyÖvning2
 
 
                     }
-                    Console.WriteLine(" the third word is  " + menning[2], Color.DarkMagenta);
-                
-            }
-            else
-            {
-               
+                    Console.WriteLine(" The third word is  " + menning[2], Color.DarkMagenta);
 
-            }
         }
 
         private static void RepeatText()
         {
             Console.WriteLine("Here you can enter your text so we can print it 10 Times !!!");
             string text = Console.ReadLine();
+            while (string.IsNullOrWhiteSpace(text))
+            {
+                System.Console.WriteLine("The text cannot be empty", Color.Yellow);
+                text = Console.ReadLine();
+               
+            }
             for (int i = 1; i <= 10; i++)
             {
                 Console.Write("{0}", i + "." + text + ", ");
