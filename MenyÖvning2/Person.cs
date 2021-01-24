@@ -39,7 +39,7 @@ namespace MenyÖvning2
 
                 ticketPris = 90;
                
-                Console.WriteLine("pensioner pris",Color.Yellow);
+                Console.WriteLine("pensioner price",Color.Yellow);
 
 
             }
@@ -48,7 +48,7 @@ namespace MenyÖvning2
             {
                 ticketPris = 120;
                 
-                Console.WriteLine("Standard pris");
+                Console.WriteLine("Standard price",Color.Blue);
                
             }
          
@@ -58,7 +58,7 @@ namespace MenyÖvning2
                 ticketPris = 80;
                 
 
-                Console.WriteLine("ungdom  pris");
+                Console.WriteLine("Teenager price",Color.Magenta);
 
             }
 

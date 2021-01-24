@@ -19,17 +19,14 @@ namespace MenyÖvning2
  
             do
             {
-                ShowMenu();
+                ShowMenu();  //this is my menu and here it starts to load my first method 
                
                 switch (Console.ReadLine())
                 {
                     case "1":
-                        Console.WriteLine(" Welcome to the Cinema");
-                       
                             g.BuyTicket();
                        
                         break;
-
 
                     case "2":
                         RepeatText();

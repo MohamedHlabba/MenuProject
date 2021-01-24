@@ -61,18 +61,18 @@ namespace MenyÖvning2
 
         public void BuyTicket()
         {
+            Console.WriteLine(" Welcome to the Cinema",Color.Beige);
 
-            
 
-                personers = new List<Person>();
+            personers = new List<Person>();
                 total = 0;
 
-                Console.WriteLine("How Many people wanna come in ");
+                Console.WriteLine("How Many people want to visit the cinema ?",Color.Beige);
                 var input2 = Console.ReadLine();
                 int antal;
                 while (!int.TryParse(input2, out antal))
                 {
-                   System.Console.WriteLine("This is not a number ",Color.Red);
+                   Console.WriteLine("This is not a number",Color.Red);
                 
                    
                     input2 = Console.ReadLine();
@@ -85,14 +85,14 @@ namespace MenyÖvning2
 
                     Person pers = new Person();
 
-                    Console.WriteLine("The Age for person {0}", i);
+                    Console.WriteLine("The Age for person {0}", i, Color.Beige);
 
                     var input = Console.ReadLine();
 
                     int age;
                     while (!int.TryParse(input, out age))
                     {
-                        System.Console.WriteLine("this is invalid age format ", Color.Red);
+                        Console.WriteLine("this is invalid age format", Color.DarkSalmon);
                         input = Console.ReadLine();
                     }
 
@@ -104,7 +104,7 @@ namespace MenyÖvning2
                     personers.Add(pers);
 
 
-                    Console.WriteLine("Your Age " + pers.Age + " your ticket cost " + pers.TicketPris + " Kr",Color.Beige);
+                    Console.WriteLine("Your Age " + pers.Age + " your ticket cost " + pers.TicketPris + " Kr", Color.Beige);
 
                 }
 
