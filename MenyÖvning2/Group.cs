@@ -113,7 +113,7 @@ namespace MenyÖvning2
             Console.WriteLine("----------------------------------------\n");
             Console.WriteLine("Number of people is  "+ personers.Count, Color.BlueViolet);
             Console.WriteLine("----------------------------------------\n");
-            Console.WriteLine("Total is : "+ total+" Kr" , Color.BlueViolet);
+            Console.WriteLine("Total is : " + total + " Kr", Color.BlueViolet);
             Console.WriteLine("----------------------------------------\n");
         }
             
