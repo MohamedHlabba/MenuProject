@@ -27,6 +27,7 @@ namespace MenyÖvning2
                         Console.WriteLine(" Welcome to the Cinema");
                        
                             g.BuyTicket();
+                        //ShowMenu();
                         break;
 
 

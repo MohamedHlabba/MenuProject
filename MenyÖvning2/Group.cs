@@ -9,9 +9,9 @@ namespace MenyÖvning2
     public class Group
 
     {
-     
+
         public Person pers = new Person();
-      
+
         List<Person> personers { get; set; }
 
 
@@ -22,8 +22,8 @@ namespace MenyÖvning2
         public Group()
         {
             personers = new List<Person>();
-       
-           
+
+
         }
 
         public void addPerson(Person p)
@@ -34,14 +34,14 @@ namespace MenyÖvning2
 
         }
 
-     
+
 
         public int countTotal()
         {
-            
-            foreach (Person pers  in personers)
+
+            foreach (Person pers in personers)
             {
-                total +=pers.TicketPris;
+                total += pers.TicketPris;
 
             }
             return total;
@@ -61,68 +61,87 @@ namespace MenyÖvning2
 
         public void BuyTicket()
         {
-            personers = new List<Person>();
-            total = 0;
 
-
-            Console.WriteLine("How Many people wanna come in ");
-            var input2 = Console.ReadLine();
-            int antal;
-            int.TryParse(input2, out antal);
             
 
-            for (int i = 1; i <= antal; i++)
-            {
+                personers = new List<Person>();
+                total = 0;
+
+                Console.WriteLine("How Many people wanna come in ");
+                var input2 = Console.ReadLine();
+                int antal;
+                while (!int.TryParse(input2, out antal))
+                {
+                    System.Console.WriteLine("This is not a number ");
+                    input2 = Console.ReadLine();
+                }
 
 
-                Person pers = new Person();
+                for (int i = 1; i <= antal; i++)
+                {
 
-                Console.WriteLine("The Age for person {0}", i);
+
+                    Person pers = new Person();
+
+                    Console.WriteLine("The Age for person {0}", i);
 
                     var input = Console.ReadLine();
 
                     int age;
-                    int.TryParse(input, out age);
+                    while (!int.TryParse(input, out age))
+                    {
+                        System.Console.WriteLine("this is invalid age format");
+                        input = Console.ReadLine();
+                    }
+
                     pers.Age = age;
 
-                   pers.TicketPris = pers.checkAge(age);
+                    pers.TicketPris = pers.checkAge(age);
 
-                  
-                  personers.Add(pers);
-                 
 
-                    Console.WriteLine("Your Age " + pers.Age + " your ticket cost " + pers.TicketPris+" Kr");
+                    personers.Add(pers);
+
+
+                    Console.WriteLine("Your Age " + pers.Age + " your ticket cost " + pers.TicketPris + " Kr");
 
                 }
 
-           
-    
 
 
 
-            foreach (Person pers in personers)
-            {
 
 
-                total += pers.TicketPris;
-             
+                foreach (Person pers in personers)
+                {
 
 
+                    total += pers.TicketPris;
+
+
+
+                }
+
+                Console.WriteLine("----------------------------------------\n");
+                Console.WriteLine("Number of people is  " + personers.Count, Color.BlueViolet);
+                Console.WriteLine("----------------------------------------\n");
+                Console.WriteLine("Total is : " + total + " Kr", Color.BlueViolet);
+                Console.WriteLine("----------------------------------------\n");
             }
-
-            Console.WriteLine("----------------------------------------\n");
-            Console.WriteLine("Number of people is  "+ personers.Count, Color.BlueViolet);
-            Console.WriteLine("----------------------------------------\n");
-            Console.WriteLine("Total is : " + total + " Kr", Color.BlueViolet);
-            Console.WriteLine("----------------------------------------\n");
-        }
-            
-          
+            //while (true);
 
         }
-
+        
 
     }
+
+
+
+
+
+        
+
+
+    
 
 
 
