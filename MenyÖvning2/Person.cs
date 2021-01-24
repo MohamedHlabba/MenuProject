@@ -39,7 +39,7 @@ namespace MenyÖvning2
 
                 ticketPris = 90;
                
-                Console.WriteLine("pensioner pris");
+                Console.WriteLine("pensioner pris",Color.Yellow);
 
 
             }

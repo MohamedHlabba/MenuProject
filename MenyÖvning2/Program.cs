@@ -27,7 +27,7 @@ namespace MenyÖvning2
                         Console.WriteLine(" Welcome to the Cinema");
                        
                             g.BuyTicket();
-                        //ShowMenu();
+                       
                         break;
 
 
@@ -62,24 +62,33 @@ namespace MenyÖvning2
         {
             Console.WriteLine("Write you mening here !");
             var input = Console.ReadLine();
+            
 
-            string[] menning = input.Split();
-            if (menning.Length >= 3)
+            while (string.IsNullOrEmpty(input) || (input.Split().Length<3))
+
             {
+                Console.WriteLine("enter a mening that contains at least 3 words try again !", Color.Orange);
+                input = Console.ReadLine();
 
-                foreach (var word in menning)
+            }
+            string[] menning = input.Split();
+
+            if (menning.Length >= 3)
                 {
-                    Console.WriteLine($"<{word}>", Color.Beige);
-                    
 
-                }
-                Console.WriteLine(" the third word is  " + menning[2], Color.DarkMagenta);
+                    foreach (var word in menning)
+                    {
+                        Console.WriteLine($"<{word}>", Color.Beige);
+
+
+                    }
+                    Console.WriteLine(" the third word is  " + menning[2], Color.DarkMagenta);
+                
             }
             else
             {
+               
 
-                Console.WriteLine("enter a mening that contains at least 3 words try again !", Color.Orange);
-                //Console.ReadKey();
             }
         }
 

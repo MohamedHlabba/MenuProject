@@ -72,7 +72,9 @@ namespace MenyÖvning2
                 int antal;
                 while (!int.TryParse(input2, out antal))
                 {
-                    System.Console.WriteLine("This is not a number ");
+                   System.Console.WriteLine("This is not a number ",Color.Red);
+                
+                   
                     input2 = Console.ReadLine();
                 }
 
@@ -90,7 +92,7 @@ namespace MenyÖvning2
                     int age;
                     while (!int.TryParse(input, out age))
                     {
-                        System.Console.WriteLine("this is invalid age format");
+                        System.Console.WriteLine("this is invalid age format ", Color.Red);
                         input = Console.ReadLine();
                     }
 
@@ -102,7 +104,7 @@ namespace MenyÖvning2
                     personers.Add(pers);
 
 
-                    Console.WriteLine("Your Age " + pers.Age + " your ticket cost " + pers.TicketPris + " Kr");
+                    Console.WriteLine("Your Age " + pers.Age + " your ticket cost " + pers.TicketPris + " Kr",Color.Beige);
 
                 }
 
@@ -122,12 +124,15 @@ namespace MenyÖvning2
                 }
 
                 Console.WriteLine("----------------------------------------\n");
-                Console.WriteLine("Number of people is  " + personers.Count, Color.BlueViolet);
-                Console.WriteLine("----------------------------------------\n");
-                Console.WriteLine("Total is : " + total + " Kr", Color.BlueViolet);
-                Console.WriteLine("----------------------------------------\n");
+                //Console.WriteLine("Number of people is  " + personers.Count);
+            //Console.WriteLine("Number of people is  " + personers.Count, Color.BlueViolet);
+            Console.WriteLine("Number of people is  " + personers.Count,Color.Beige);
+            Console.WriteLine("----------------------------------------\n");
+                //Console.WriteLine("Total is : " + total + " Kr", Color.BlueViolet);
+            Console.WriteLine("Total is : " + total + " Kr",Color.Beige);
+            Console.WriteLine("----------------------------------------\n");
             }
-            //while (true);
+           
 
         }
         
