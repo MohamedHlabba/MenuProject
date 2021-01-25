@@ -61,7 +61,7 @@ namespace MenyÖvning2
             var input = Console.ReadLine();
             
 
-            while (string.IsNullOrEmpty(input) || (input.Split().Length<3))
+            while (string.IsNullOrEmpty(input) || (input.Split().Length<3))// test input , must be not null or less than 3 words
 
             {
                 Console.WriteLine("enter a mening that contains at least 3 words try again !", Color.GreenYellow);
@@ -84,7 +84,7 @@ namespace MenyÖvning2
         {
             Console.WriteLine("Here you can enter your text so we can print it 10 Times !!!");
             string text = Console.ReadLine();
-            while (string.IsNullOrWhiteSpace(text))
+            while (string.IsNullOrWhiteSpace(text)) //test input
             {
                 System.Console.WriteLine("The text cannot be empty", Color.Yellow);
                 text = Console.ReadLine();
@@ -92,7 +92,13 @@ namespace MenyÖvning2
             }
             for (int i = 1; i <= 10; i++)
             {
+                if (i != 10) { 
                 Console.Write("{0}", i + "." + text + ", ");
+                }
+                else
+                {
+                    System.Console.WriteLine("{0}", i + "." + text + ".");
+                }
             }
             Console.WriteLine("\n");
         }

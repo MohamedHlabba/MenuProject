@@ -30,23 +30,10 @@ namespace MenyÖvning2
         {
 
 
-            personers.Add(p);
+            personers.Add(p);  // this is method for creating new person and add it to the list of persons 
 
         }
 
-
-
-        public int countTotal()
-        {
-
-            foreach (Person pers in personers)
-            {
-                total += pers.TicketPris;
-
-            }
-            return total;
-
-        }
 
 
         public List<String> affichpeople()
@@ -70,7 +57,7 @@ namespace MenyÖvning2
                 Console.WriteLine("How Many people want to visit the cinema ?",Color.Beige);
                 var input2 = Console.ReadLine();
                 int antal;
-                while (!int.TryParse(input2, out antal))
+                while (!int.TryParse(input2, out antal)) //this is a test if the input is not a number we force the user to enter a number
                 {
                    Console.WriteLine("This is not a number",Color.Red);
                 
@@ -90,7 +77,7 @@ namespace MenyÖvning2
                     var input = Console.ReadLine();
 
                     int age;
-                    while (!int.TryParse(input, out age))
+                    while (!int.TryParse(input, out age))//test for input, the input must be a number 
                     {
                         Console.WriteLine("this is invalid age format", Color.DarkSalmon);
                         input = Console.ReadLine();
@@ -109,28 +96,21 @@ namespace MenyÖvning2
                 }
 
 
-
-
-
-
-                foreach (Person pers in personers)
+                foreach (Person pers in personers) 
                 {
 
 
-                    total += pers.TicketPris;
+                    total += pers.TicketPris; //here we count the total 
+                                              //we get all the person on the list personers and get the person.ticket and add it to the total
 
 
+            }
 
-                }
-
+            Console.WriteLine("----------------------------------------\n");
+                Console.WriteLine("Number of people is  " + personers.Count,Color.Beige);
                 Console.WriteLine("----------------------------------------\n");
-                //Console.WriteLine("Number of people is  " + personers.Count);
-            //Console.WriteLine("Number of people is  " + personers.Count, Color.BlueViolet);
-            Console.WriteLine("Number of people is  " + personers.Count,Color.Beige);
-            Console.WriteLine("----------------------------------------\n");
-                //Console.WriteLine("Total is : " + total + " Kr", Color.BlueViolet);
-            Console.WriteLine("Total is : " + total + " Kr",Color.Beige);
-            Console.WriteLine("----------------------------------------\n");
+                Console.WriteLine("Total is : " + total + " Kr",Color.Beige);
+                Console.WriteLine("----------------------------------------\n");
             }
            
 
